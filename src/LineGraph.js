@@ -73,7 +73,7 @@ function LineGraph({casesType = "cases"}) {
             )
                 .then((res) => res.json())
                 .then((data) => {
-                    let chartData = buildChartData(data, "recovered");
+                    let chartData = buildChartData(data, casesType);
                     setData(chartData);
                 });
         };
